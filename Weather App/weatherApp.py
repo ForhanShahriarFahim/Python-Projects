@@ -9,7 +9,7 @@ url = "https://weather.com/weather/today/l/976b6655d9aca9c81a71e34d15d14584404ca
 
 master = Tk()
 master.title("Weather App")
-master.config(bg="white")
+master.config(bg="lightcyan")
 
 img = Image.open("weather1.png")
 img = img.resize((150,150))
@@ -29,12 +29,12 @@ def getWeather():
     weatherPredictionLabel.config(text=weatherPrediction)
 
 # Creating Lebel
-locationLabel = Label(master, font = ("Calibri bold", 20),fg="steelblue",bg='white')
+locationLabel = Label(master, font = ("Calibri bold", 20),fg="steelblue",bg='lightcyan')
 locationLabel.grid(row=0, sticky ="N",padx=40)
-temperatureLabel = Label(master, font = ("Calibri bold", 80),fg='orange',bg='white')
+temperatureLabel = Label(master, font = ("Calibri bold", 80),fg='orange',bg='lightcyan')
 temperatureLabel.grid(row=1, sticky ="W",padx=60)
 Label(master, image=img, bg='white').grid(row=1,sticky='E')
-weatherPredictionLabel = Label(master, font=("Calibri bold",18),fg='sandybrown',bg='white')
+weatherPredictionLabel = Label(master, font=("Calibri bold",18),fg='sandybrown',bg='lightcyan')
 weatherPredictionLabel.grid(row=2,sticky='W', padx=60)
 getWeather()
 master.mainloop()
